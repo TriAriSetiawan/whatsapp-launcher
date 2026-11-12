@@ -1,0 +1,13 @@
+/* Ekstensi: Blur pratinjau pesan */
+/* Menyamarkan potongan pesan terakhir di daftar chat agar tidak terbaca orang lain.
+   Arahkan mouse ke sebuah chat untuk melihat pratinjaunya. Badge jumlah pesan tetap terlihat. */
+#pane-side [data-testid="cell-frame-secondary"] [data-testid="last-msg-status"],
+#pane-side [data-testid="cell-frame-secondary"] span[dir="auto"]:not([data-testid="last-msg-status"] *) {
+  filter: blur(5px);
+  transition: filter 0.15s ease;
+}
+
+#pane-side [role="row"]:hover [data-testid="cell-frame-secondary"] [data-testid="last-msg-status"],
+#pane-side [role="row"]:hover [data-testid="cell-frame-secondary"] span[dir="auto"]:not([data-testid="last-msg-status"] *) {
+  filter: none;
+}
