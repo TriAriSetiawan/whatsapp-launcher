@@ -3,7 +3,7 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 
-APP="build/WhatsApp Web.app"
+APP="build/WhatsappWeb.app"
 BUNDLE_ID="local.whatsapp.launcher"
 rm -rf "$APP"
 mkdir -p "$APP/Contents/MacOS" "$APP/Contents/Resources" build/tmp
@@ -33,8 +33,8 @@ cat > "$APP/Contents/Info.plist" <<PLIST
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-  <key>CFBundleName</key><string>WhatsApp</string>
-  <key>CFBundleDisplayName</key><string>WhatsApp Web</string>
+  <key>CFBundleName</key><string>WhatsappWeb</string>
+  <key>CFBundleDisplayName</key><string>WhatsappWeb</string>
   <key>CFBundleIdentifier</key><string>${BUNDLE_ID}</string>
   <key>CFBundleExecutable</key><string>WhatsApp</string>
   <key>CFBundleIconFile</key><string>AppIcon</string>
@@ -58,7 +58,7 @@ rm -rf build/tmp
 echo "✓ $APP ($(du -sh "$APP" | cut -f1))"
 
 if [[ "${1:-}" == "install" ]]; then
-  rm -rf "/Applications/WhatsApp Web.app"
+  rm -rf "/Applications/WhatsappWeb.app" "/Applications/WhatsApp Web.app"  # nama lama ikut dihapus
   cp -R "$APP" /Applications/
-  echo "✓ Terpasang di /Applications/WhatsApp Web.app"
+  echo "✓ Terpasang di /Applications/WhatsappWeb.app"
 fi

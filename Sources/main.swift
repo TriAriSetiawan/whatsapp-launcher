@@ -6,7 +6,7 @@ import UserNotifications
 
 private let homeURL = URL(string: "https://web.whatsapp.com/")!
 private let allowedHosts: Set<String> = ["web.whatsapp.com", "whatsapp.com", "www.whatsapp.com"]
-private let appTitle = "WhatsApp Web"
+private let appTitle = "WhatsappWeb"
 
 // MARK: - Script yang disuntikkan ke halaman
 

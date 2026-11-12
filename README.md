@@ -1,12 +1,12 @@
-# WhatsApp Web Launcher (macOS)
+# WhatsappWeb (macOS)
 
 App native kecil (Swift + AppKit + WKWebView bawaan macOS) yang langsung membuka https://web.whatsapp.com. Tidak pakai Electron atau Chromium, dan tidak butuh browser pihak ketiga.
 
 ## Build & install
 
 ```bash
-./build.sh            # hasil: build/WhatsApp Web.app
-./build.sh install    # sekaligus salin ke /Applications/WhatsApp Web.app
+./build.sh            # hasil: build/WhatsappWeb.app
+./build.sh install    # sekaligus salin ke /Applications/WhatsappWeb.app
 ```
 
 ## Fitur
